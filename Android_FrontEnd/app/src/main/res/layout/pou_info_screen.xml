@@ -11,7 +11,7 @@
         android:id="@+id/botonLogout"
         android:layout_width="140dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="164dp"
         android:backgroundTint="@color/color10"
         android:fontFamily="@font/pou_font"
         android:gravity="center"
@@ -247,5 +247,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/salud_info"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/editar_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:onClick="clickEditarPerfil"
+        android:gravity="center"
+        android:text="Editar perfil"
+        app:layout_constraintBottom_toTopOf="@+id/botonLogout"
+        app:layout_constraintEnd_toEndOf="@+id/titulo_info"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/titulo_info" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

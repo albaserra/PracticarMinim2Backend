@@ -32,7 +32,7 @@ import upc.edu.dsa.myapplication.Entities.VO.*;
 public class Activity_Pou_Info extends AppCompatActivity {
 
     ImageButton btnLeft, btnRight;
-    Button botonLogout;
+    Button botonLogout, botonEditarPerfil;
     TextView titulo_correo_info,correo_info,titulo_nacimiento_info,nacimiento_info,titulo_nombre_info,nombre_info,titulo_id_info,id_info;
     TextView diversion_info,titulo_info,hambre_info,dinero_info,sueno_info,salud_info;
 
@@ -79,6 +79,7 @@ public class Activity_Pou_Info extends AppCompatActivity {
     String posee_boina = "NO";
     String posee_polo = "YES";
     String activityOrigen = "Juego";
+
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     @SuppressLint({"CutPasteId", "SetTextI18n"})
@@ -292,5 +293,15 @@ public class Activity_Pou_Info extends AppCompatActivity {
         StyleableToast.makeText(this, "¡Se ha hecho Logout del Pou!", R.style.exampleToast).show();
         Intent i = new Intent(Activity_Pou_Info.this, Activity_Pou_Home.class);
         startActivity(i);
+    }
+
+    public void clickEditarPerfil(View view){
+        Intent i1 = new Intent(Activity_Pou_Info.this, Activity_Editar_Perfil.class);
+        startActivity(i1);
+        i1.putExtra("pasarDataPouId",data_pouId);
+        i1.putExtra("pasarDataNombrePou",data_nombrePou);
+        i1.putExtra("pasarDataNacimientoPou",data_nacimientoPou);
+        i1.putExtra("pasarDataCorreoPou",data_correoPou);
+        i1.putExtra("pasarDataPasswordPou", data_passwordPou);
     }
 }
